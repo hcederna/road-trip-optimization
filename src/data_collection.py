@@ -133,3 +133,34 @@ def create_distance_and_duration_df(distance_duration_data):
     distance_duration_df['Duration (hhmm)'] = distance_duration_df['Duration (s)'].apply(convert_seconds_to_hhmm)
 
     return(distance_duration_df)
+
+
+def add_reverse_travel_information_to_distance_duration_df(distance_duration_df):
+    """
+    Duplicate row with travel information for A to B to create a
+    row with travel information for B to A.
+
+    Parameters
+    ----------
+    distance_duration_df : pandas.core.frame.DataFrame
+        A distance and duration DataFrame including venue 1, venue 2,
+        distance (mi), duration (s), and duration (hhmm). Data includes
+        travel information for A to B, excludes B to A.
+
+    Returns
+    -------
+    distance_duration_df : pandas.core.frame.DataFrame
+        A distance and duration DataFrame including venue 1, venue 2,
+        distance (mi), duration (s), and duration (hhmm). Data includes
+        travel information for A to B and B to A.
+
+    """
+    _df = distance_duration_df.copy(deep=True)
+
+    _df.rename(columns={"Venue 1": "Venue 2",
+                        "Venue 2": "Venue 1"},
+               inplace=True)
+
+    distance_duration_df = distance_duration_df.append(_df, ignore_index=True, sort=False)
+
+    return(distance_duration_df)
