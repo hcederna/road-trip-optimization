@@ -1,9 +1,9 @@
 """
 
 Thank you to Randal S. Olson (http://www.randalolson.com/) for the
-genetic algorithm code below. All the credit for the code goes to him
-with a few minor adjustments made by me (I added missing function
-parameters and wrote the update_results_html_file and create_results_df
+genetic algorithm code below. All credit for the code goes to him with
+a few minor adjustments made by me (I added missing function parameters
+and wrote the update_results_html_file and create_results_df
 functions).
 
 Source : https://github.com/rhiever/Data-Analysis-and-Machine-Learning-

@@ -1,3 +1,16 @@
+"""
+
+Thank you to Randal S. Olson (http://www.randalolson.com/) for the
+query Google Maps API code below. All credit for the query gmaps api
+for one way driving distance and duration function goes to him with
+a few adjustments made by me.
+
+Source : https://github.com/rhiever/Data-Analysis-and-Machine-Learning-
+Projects/blob/master/optimal-road-trip/Computing%20the%20optimal%20road
+%20trip%20across%20the%20U.S..ipynb
+
+"""
+
 import googlemaps
 from itertools import combinations
 import pandas as pd
@@ -137,7 +150,8 @@ def create_distance_and_duration_df(distance_duration_data):
 
 def add_reverse_travel_information_to_distance_duration_df(distance_duration_df):
     """
-    Duplicate row with travel information for A to B to create a
+    Add reverse travel information to distance duration df by
+    duplicating each row with travel information for A to B to create a
     row with travel information for B to A.
 
     Parameters
