@@ -1,4 +1,5 @@
 import random
+import pandas as pd
 
 
 def compute_fitness(solution, distances):
@@ -84,12 +85,26 @@ def generate_random_population(pop_size, all_waypoints):
     return random_population
 
 
-def run_genetic_algorithm(all_waypoints, generations=5000, population_size=100):
+def run_genetic_algorithm(all_waypoints, distance_duration_filename, generations=5000, population_size=100):
     """
         The core of the Genetic Algorithm.
 
         `generations` and `population_size` must be a multiple of 10.
     """
+
+    distances = {}
+    durations = {}
+    hhmms = {}
+
+    # Create distance and duration df from filename
+    distance_duration_df = pd.read_csv(distance_duration_filename, index_col=0)
+
+    for i, row in distance_duration_df.iterrows():
+
+        # Create dicts as {frozenset({Venue 1, Venue 2}): distance, duration, or hhmm value}
+        distances[frozenset([row['Venue 1'], row['Venue 2']])] = row['Distance (mi)']
+        durations[frozenset([row['Venue 1'], row['Venue 2']])] = row['Duration (s)']
+        hhmms[frozenset([row['Venue 1'], row['Venue 2']])] = row['Duration (hhmm)']
 
     population_subset_size = int(population_size / 10.)
     generations_10pct = int(generations / 10.)
