@@ -1,6 +1,8 @@
 import random
 import pandas as pd
 
+from src.data_collection import add_reverse_travel_information_to_distance_duration_df
+
 
 def compute_fitness(solution, distances):
     """
@@ -180,3 +182,24 @@ def update_results_html_file(template_filename, output_filename, results):
     with open(output_filename, "w") as file:
 
         file.write(html_data)
+
+
+def create_results_df(distance_duration_filename, results):
+    """
+        Create distance and duration df ordered based on the results
+        of the genetic algorithm.
+    """
+
+    df = pd.read_csv(distance_duration_filename, index_col=0)
+    df = add_reverse_travel_information_to_distance_duration_df(df)
+
+    results_df = pd.DataFrame()
+
+    for i in range(len(results)):
+
+        results_df = results_df.append(df[(df['Venue 1'] == results[i]) & (df['Venue 2'] == results[(i + 1) % len(results)])])
+
+    results_df = results_df[['Venue 1', 'Venue 2', 'Duration (hhmm)', 'Distance (mi)']]
+    results_df = results_df.reset_index(drop=True)
+
+    return(results_df)
