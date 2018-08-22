@@ -92,6 +92,7 @@ def run_genetic_algorithm(all_waypoints, distance_duration_filename, generations
         `generations` and `population_size` must be a multiple of 10.
     """
 
+    # Initialize data variables
     distances = {}
     durations = {}
     hhmms = {}
@@ -135,6 +136,11 @@ def run_genetic_algorithm(all_waypoints, distance_duration_filename, generations
                                                                        len(population_fitness)))
                 print(agent_genome)
                 print("")
+
+            # Return final printed agent genome
+            if generation == generations - 1 and rank == 0:
+
+                return(agent_genome)
 
             # Create 1 exact copy of each of the top road trips
             new_population.append(agent_genome)
