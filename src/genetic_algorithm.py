@@ -158,3 +158,25 @@ def run_genetic_algorithm(all_waypoints, distance_duration_filename, generations
             del population[i]
 
         population = new_population
+
+
+def update_results_html_file(template_filename, output_filename, results):
+    """
+        Replace optimal route [...] in template file HTML with results and
+        save HTML as output file.
+    """
+
+    # Read in data from template HTML file
+    with open(template_filename, "r") as file:
+        html_data = file.read()
+
+    # Reformat results data
+    results = str(results).replace("(", "").replace(")", "")
+
+    # Replace ... in template HTML with correct output
+    html_data = html_data.replace("...", results)
+
+    # Write data to output HTML file
+    with open(output_filename, "w") as file:
+
+        file.write(html_data)
