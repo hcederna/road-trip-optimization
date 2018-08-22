@@ -1,3 +1,17 @@
+"""
+
+Thank you to Randal S. Olson (http://www.randalolson.com/) for the
+genetic algorithm code below. All the credit for the code goes to him
+with a few minor adjustments made by me (I added missing function
+parameters and wrote the update_results_html_file and create_results_df
+functions).
+
+Source : https://github.com/rhiever/Data-Analysis-and-Machine-Learning-
+Projects/blob/master/optimal-road-trip/Computing%20the%20optimal%20road
+%20trip%20across%20the%20U.S..ipynb
+
+"""
+
 import random
 import pandas as pd
 
@@ -186,8 +200,8 @@ def update_results_html_file(template_filename, output_filename, results):
 
 def create_results_df(distance_duration_filename, results):
     """
-        Create distance and duration df ordered based on the results
-        of the genetic algorithm.
+        Create distance and duration df ordered based on the results of
+        the genetic algorithm.
     """
 
     df = pd.read_csv(distance_duration_filename, index_col=0)
