@@ -53,7 +53,7 @@ conda list
 
 You should see a list of packages and package versions installed in your environment, such as `python    3.6.6` . If instead you see an error message, reference [Creating an environment from an environment.yml file](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) in the conda documentation.
 
-### *Alternative approach : download necessary packages*
+### *Alternative : Install necessary packages*
 
 You will need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jupyter` packages to successfully run the road trip optimization program.
 
