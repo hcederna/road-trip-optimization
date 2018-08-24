@@ -5,11 +5,11 @@ Use a genetic algorithm to determine the optimal driving route between up to 70 
 
 Visualize the optimal route in your web browser with Google Maps.
 
-<img src="images/east_2915_f76_results_map.png" title="optimal route map" height="750" width="750">
+<img src="images/east_2915_f76_results_map.png" title="optimal route map">
 
 Review in tabular form the driving distances and durations between each point of interest in the optimal route.
 
-<img src="images/east_2915_f76_results_distance_duration.png" title="optimal route driving distances and durations" height="750" width="750">
+<img src="images/east_2915_f76_results_distance_duration.png" title="optimal route driving distances and durations">
 
 ## Acknowledgements
 
@@ -27,27 +27,27 @@ The next step is to create a virtual environment on your computer. This environm
 
 To confirm Anaconda is installed correctly, open a terminal window and run:
 
-```python
+```
 conda --version
 ```
 
 You should see the installed version number, such as `conda 4.3.27`. If instead you see an error message, reference [Verifying that conda is installed](https://conda.io/docs/user-guide/tasks/manage-conda.html) in the conda documentation.
 
-With Anaconda correctly installed, you can use the `environment.yml` file to create a virtual environment on your computer. In the terminal, you need to navigate to the road-trip-optimization directory using the terminal command `cd <folder path>`. Once in the correct directory, run:
+With Anaconda correctly installed, you can use the `environment.yml` file to create a virtual environment on your computer. In the terminal, navigate to the road-trip-optimization directory using the command `cd <folder path>`. Once in the correct directory, run:
 
-```python
+```
 conda env create -f environment.yml
 ```
 
-You can now "enter" the new virtual environment using the following command:
+You can now "enter" the new virtual environment with:
 
-```python
+```
 source activate road-trip
 ```
 
 Verify the road-trip environment was installed correctly using:
 
-```python
+```
 conda list
 ```
 
@@ -55,7 +55,7 @@ You should see a list of packages and package versions installed in your environ
 
 ### *Alternative approach : download necessary packages*
 
-You will need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jupyter` packages.
+You will need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jupyter` packages to successfully run the road trip optimization program.
 
 ### Get a Google Maps API key
 You'll need a Google Maps API key in order to collect driving distance and duration information. Fortunately, these keys are available for free with a Google Account. To get an API key:
@@ -71,13 +71,13 @@ You'll need a Google Maps API key in order to collect driving distance and durat
 # Enter your Google Maps API key
 GOOGLE_MAPS_API_KEY = "Paste Your API Key Here"
 ```
-7. Ensure you pasted your API key between the ""s
+7. Ensure you pasted your API key between the " "
 8. Save this file as `config.py` in the road-trip-optimization directory on your Desktop
 
 ### Run the program
 You are now ready to optimize your road trip!
 
-Go to the terminal window where you activated your road-trip-optimization environment and run:
+Go to the terminal window where you activated your road-trip environment and run:
 
 ```
 jupyter notebook
@@ -85,8 +85,6 @@ jupyter notebook
 
 A window should open in your web browser with what looks like your folder directory. If the window does not open automatically, copy/paste the URL in the terminal to your favorite web browser.
 
-Navigate through the folder structure to the `road-trip-optimization` directory on your Desktop. Open the `Road Trip Optimization.ipynb` file.
-
-Follow the instructions in the notebook. Press `Shift + Enter` to run the code in each cell.
+Navigate through the folder structure to the road-trip-optimization directory on your Desktop. Open the `Road Trip Optimization.ipynb` file. Follow the instructions in the notebook and press `Shift + Enter` to run the code in each cell.
 
 Congratulations you are now a road trip optimizing machine!
