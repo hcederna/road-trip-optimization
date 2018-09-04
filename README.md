@@ -53,7 +53,7 @@ This will install the necessary packages and may take some time to finish. Once 
 conda info --env
 ```
 
-to list the virtual environments available on your computer with the active environment identified with an asterisk (*). You should see the new `road-trip` environment on this list.
+to list the virtual environments available on your computer with the active environment identified with an asterisk (*). You should see the new road-trip environment on this list.
 
 Activate the `road-trip` virtual environment by running the following command:
 
@@ -77,7 +77,7 @@ Once in the correct directory, you can create a `road-trip` virtual environment 
 conda create -n road-trip python=3.6.6 pandas=0.23.4 jupyter=1.0.0
 ```
 
-When prompted to proceed type `y` and hit `Enter`. This will install the correct version of Python along with the correct versions of the `pandas` and `jupyter` packages into a newly created `road-trip` virtual environment. Note that each installation may take some time to finish.
+When prompted to proceed type `y` and hit `Enter`. This will install the correct version of Python along with the correct versions of the pandas and Jupyter packages into a newly created road-trip virtual environment. Note that each installation may take some time to finish.
 
 Now activate the `road-trip` environment by running:
 
@@ -85,7 +85,7 @@ Now activate the `road-trip` environment by running:
 source activate road-trip
 ```
 
-You need to install one additional package, `googlemaps`, using conda-forge before you are ready to optimize a road trip. Install the `googlemaps` package using the following command:
+You need to install one additional package called googlemaps using conda-forge before you are ready to optimize a road trip. Install the `googlemaps` package using the following command:
 
 ```
 conda install -c conda-forge googlemaps
@@ -127,7 +127,7 @@ GOOGLE_MAPS_API_KEY = "Paste Your API Key Here"
 
 You are now ready to optimize your road trip!
 
-Go to the terminal window where you activated your `road-trip` environment and run:
+Go to the terminal window where you activated your road-trip environment and run:
 
 ```
 jupyter notebook
@@ -153,7 +153,7 @@ To deactivate the `road-trip` environment, run:
 source deactivate road-trip
 ```
 
-If you want to remove the `road-trip` virtual environment from your computer (this is optional), use the command:
+If you want to remove the road-trip virtual environment from your computer (this is optional), use the command:
 
 ```
 conda env remove --name road-trip
