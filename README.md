@@ -141,11 +141,15 @@ Congratulations you are now a road trip optimizing machine!
 
 ## Cleanup
 
-When you finish using the `Road Trip Optimization.ipynb` file, go to `File > Save and Checkpoint` to save your progress and `File > Close and Halt` to close the notebook.
+### Road trip optimization notebook
 
-Close the tab with the Jupyter folder directory in your web browser.
+When you finish using the `Road Trip Optimization.ipynb` notebook, go to `File > Save and Checkpoint` to save your progress and `File > Close and Halt` to close the notebook.
+
+Exit the tab with the Jupyter folder directory in your web browser.
 
 Go to the terminal window and press `Control + C` two times to shut down the notebook server.
+
+### Road trip virtual environment
 
 To deactivate the `road-trip` environment, run:
 
@@ -153,7 +157,7 @@ To deactivate the `road-trip` environment, run:
 source deactivate road-trip
 ```
 
-If you want to remove the road-trip virtual environment from your computer (this is optional), use the command:
+If you want to remove the `road-trip` virtual environment from your computer (this is optional), use the command:
 
 ```
 conda env remove --name road-trip
