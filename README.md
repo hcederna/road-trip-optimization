@@ -19,7 +19,7 @@ This project was made possible by [Randal S. Olson](http://www.randalolson.com/)
 
 ### Download the repository
 
-Click  `Clone or download`  and `Download ZIP`. Once the download is complete, unzip the file and drag it onto your Desktop.
+Click  `Clone or download`  and `Download ZIP`. Once the download is complete, unzip the file and drag it onto your desktop.
 
 ### Setup a virtual environment with Anaconda
 
@@ -67,7 +67,7 @@ Verify the `road-trip` environment was installed correctly using:
 conda list
 ```
 
-You should see a list of packages and package versions installed in your environment, including `googlemaps    2.5.1`, `jupyter    1.0.0`, 'pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [creating an environment from an environment.yml file](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) in the conda documentation.
+You should see a list of packages and package versions installed in your environment, including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [creating an environment from an environment.yml file](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) in the conda documentation.
 
 #### Option 2: Create an environment and install necessary packages
 
@@ -77,7 +77,7 @@ Once in the correct directory, you can create a `road-trip` virtual environment 
 conda create -n road-trip python=3.6.6 pandas=0.23.4 jupyter=1.0.0
 ```
 
-When prompted to proceed type `y` and hit enter. This will install the correct version of Python along with the correct versions of the pandas and Jupyter packages into a newly created `road-trip` virtual environment. Note that each installation may take some time to finish.
+When prompted to proceed type `y` and hit `Enter`. This will install the correct version of Python along with the correct versions of the `pandas` and `jupyter` packages into a newly created `road-trip` virtual environment. Note that each installation may take some time to finish.
 
 Now activate the `road-trip` environment by running:
 
@@ -85,13 +85,13 @@ Now activate the `road-trip` environment by running:
 source activate road-trip
 ```
 
-You need to install one additional package, googlemaps, using conda-forge before you are ready to optimize a road trip. Install the googlemaps package using the following command:
+You need to install one additional package, `googlemaps`, using conda-forge before you are ready to optimize a road trip. Install the `googlemaps` package using the following command:
 
 ```
 conda install -c conda-forge googlemaps
 ```
 
-When prompted to proceed type `y` and hit enter.
+When prompted to proceed type `y` and hit `Enter`.
 
 Verify your `road-trip` environment is set up correctly using:
 
@@ -99,7 +99,7 @@ Verify your `road-trip` environment is set up correctly using:
 conda list
 ```
 
-You should see a list of installed packages and package versions including `googlemaps    2.5.1`, `jupyter    1.0.0`, 'pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [installing packages](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages) in the conda documentation.
+You should see a list of installed packages and package versions including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [installing packages](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages) in the conda documentation.
 
 ### *Alternative without Anaconda: Install necessary packages*
 
@@ -121,7 +121,7 @@ You will need a [Google Maps API](https://cloud.google.com/maps-platform/) key i
 GOOGLE_MAPS_API_KEY = "Paste Your API Key Here"
 ```
 7. Ensure you pasted your API key between the " "
-8. Save this file as `config.py` in the `road-trip-optimization-master` directory on your Desktop
+8. Save this file as `config.py` in the `road-trip-optimization-master` directory on your desktop
 
 ### Run the program
 
@@ -135,7 +135,7 @@ jupyter notebook
 
 A window should open in your web browser with what looks like your folder directory. If the window does not open automatically, copy/paste the URL in the terminal into your favorite web browser.
 
-Navigate through the folder structure to the `road-trip-optimization-master` directory on your Desktop. Open the `Road Trip Optimization.ipynb` file. Follow the instructions in the notebook and press `Shift + Enter` to run the code in each cell.
+Navigate through the folder structure to the `road-trip-optimization-master` directory on your desktop. Open the `Road Trip Optimization.ipynb` file. Follow the instructions in the notebook and press `Shift + Enter` to run the code in each cell.
 
 Congratulations you are now a road trip optimizing machine!
 
