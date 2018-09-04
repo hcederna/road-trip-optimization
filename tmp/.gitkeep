@@ -1,0 +1,2 @@
+# Use to add empty tmp directory to repository
+# Without this file the empty tmp directory will not push to repository
