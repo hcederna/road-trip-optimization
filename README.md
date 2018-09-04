@@ -139,7 +139,7 @@ Navigate through the folder structure to the `road-trip-optimization-master` dir
 
 Congratulations you are now a road trip optimizing machine!
 
-### Cleanup
+## Cleanup
 
 When you finish using the `Road Trip Optimization.ipynb` file, go to `File > Save and Checkpoint` to save your progress and `File > Close and Halt` to close the notebook.
 
