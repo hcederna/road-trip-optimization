@@ -1,4 +1,5 @@
 
+
 # Road Trip Optimization
 
 Use a genetic algorithm to determine the optimal driving route between up to 70 points of interest.
@@ -23,7 +24,7 @@ Click  `Clone or download`  and `Download ZIP`. Once the download is complete, u
 
 ### Setup a virtual environment with Anaconda
 
-The next step is to create a virtual environment on your computer. This environment will hold the Python version and packages necessary for road trip optimization. We can build the environment using the [Anaconda Distribution](https://www.anaconda.com/what-is-anaconda/), a popular Python data science platform for package management and deployment. If you already have Anaconda installed, move on to the next step. Otherwise, [download Anaconda here](https://www.anaconda.com/download/).
+The next step is to create a virtual environment on your computer. This environment holds the Python version and packages necessary for road trip optimization. We can build the environment using the [Anaconda Distribution](https://www.anaconda.com/what-is-anaconda/), a popular Python data science platform for package management and deployment. If you already have Anaconda installed, move on to the next step. Otherwise, [download Anaconda here](https://www.anaconda.com/download/).
 
 To confirm Anaconda is installed correctly, [open a terminal window](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line) and run:
 
@@ -31,7 +32,7 @@ To confirm Anaconda is installed correctly, [open a terminal window](http://blog
 conda --version
 ```
 
-You should see the installed version number, such as `conda 4.3.27`. If instead you see an error message, reference [verifying that conda is installed](https://conda.io/docs/user-guide/tasks/manage-conda.html) in the conda documentation.
+You should see the installed version number, such as `conda 4.3.27`. If instead, you see an error message, reference [verifying that conda is installed](https://conda.io/docs/user-guide/tasks/manage-conda.html) in the conda documentation.
 
 With Anaconda correctly installed, navigate in the terminal to the `road-trip-optimization-master` directory using the command:
 
@@ -47,7 +48,7 @@ Once in the correct directory, you can use the `environment.yml` file to create 
 conda env create -f environment.yml
 ```
 
-This will install the necessary packages and may take some time to finish. Once the process is complete, run:
+This installs the necessary packages and may take some time to finish. Once the process is complete, run:
 
 ```
 conda info --env
@@ -61,13 +62,13 @@ Activate the `road-trip` virtual environment by running the following command:
 source activate road-trip
 ```
 
-Verify the `road-trip` environment was installed correctly using:
+Verify that the `road-trip` environment installed correctly using:
 
 ```
 conda list
 ```
 
-You should see a list of packages and package versions installed in your environment, including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [creating an environment from an environment.yml file](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) in the conda documentation.
+You should see a list of packages and package versions installed in your environment, including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead, you see an error message, reference [creating an environment from an environment.yml file](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) in the conda documentation.
 
 #### Option 2: Create an environment and install necessary packages
 
@@ -77,7 +78,7 @@ Once in the correct directory, you can create a `road-trip` virtual environment 
 conda create -n road-trip python=3.6.6 pandas=0.23.4 jupyter=1.0.0
 ```
 
-When prompted to proceed type `y` and hit `Enter`. This will install the correct version of Python along with the correct versions of the pandas and Jupyter packages into a newly created road-trip virtual environment. Note that each installation may take some time to finish.
+When prompted to proceed, type `y` and hit `Enter`. This installs the correct version of Python along with the correct versions of the pandas and Jupyter packages into a newly created road-trip virtual environment. Note that each installation may take some time to finish.
 
 Now activate the `road-trip` environment by running:
 
@@ -91,7 +92,7 @@ You need to install one additional package called googlemaps using conda-forge b
 conda install -c conda-forge googlemaps
 ```
 
-When prompted to proceed type `y` and hit `Enter`.
+When prompted to proceed, type `y` and hit `Enter`.
 
 Verify your `road-trip` environment is set up correctly using:
 
@@ -99,15 +100,15 @@ Verify your `road-trip` environment is set up correctly using:
 conda list
 ```
 
-You should see a list of installed packages and package versions including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead you see an error message, reference [installing packages](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages) in the conda documentation.
+You should see a list of installed packages and package versions including `googlemaps    2.5.1`, `jupyter    1.0.0`, `pandas    0.23.4`, and `python    3.6.6` . If instead, you see an error message, reference [installing packages](https://conda.io/docs/user-guide/tasks/manage-pkgs.html#installing-packages) in the conda documentation.
 
 ### *Alternative without Anaconda: Install necessary packages*
 
-You will need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jupyter` packages to successfully run the road trip optimization program.
+You need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jupyter` packages to successfully run the road trip optimization program.
 
 ### Get a Google Maps API key
 
-You will need a [Google Maps API](https://cloud.google.com/maps-platform/) key in order to collect driving distance and duration information. Fortunately, these keys are available for free with a Google Account. To get an API key:
+You need a [Google Maps API](https://cloud.google.com/maps-platform/) key to collect driving distance and duration information. Fortunately, these keys are available for free with a Google Account. To get an API key:
 
 1. Visit https://developers.google.com/console and log in with your Google Account
 2. Create a new project
@@ -137,7 +138,7 @@ A window should open in your web browser with what looks like your folder direct
 
 Navigate through the folder structure to the `road-trip-optimization-master` directory on your desktop. Open the `Road Trip Optimization.ipynb` file. Follow the instructions in the notebook and press `Shift + Enter` to run the code in each cell.
 
-Congratulations you are now a road trip optimizing machine!
+Congratulations, you are now a road trip optimizing machine!
 
 ## Cleanup
 
