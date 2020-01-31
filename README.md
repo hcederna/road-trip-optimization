@@ -1,5 +1,3 @@
-
-
 # Road Trip Optimization
 
 Use a genetic algorithm to determine the optimal driving route between up to 70 points of interest.
@@ -108,21 +106,61 @@ You need `Python 3.5` or greater along with the `pandas`, `googlemaps`, and `jup
 
 ### Get a Google Maps API key
 
-You need a [Google Maps API](https://cloud.google.com/maps-platform/) key to collect driving distance and duration information. Fortunately, these keys are available for free with a Google Account. To get an API key:
+You need a [Google Maps API](https://cloud.google.com/maps-platform/) key to collect driving distance and duration information and to display a map showing the optimal road trip route. These keys are available with a Google Account. 
 
-1. Visit https://developers.google.com/console and log in with your Google Account
-2. Create a new project
-3. Enable the Distance Matrix API
-4. Create a new Server key
-5. Copy your new API key
+You must set up a billing account to use the Google Maps Platform. Fortunately, you get $200 in free usage every month. That is enough to optimize multiple road trips for free.  
+
+1. Go to the [Google Cloud Platform Console](https://console.cloud.google.com/getting-started)
+2. Click the `navigation menu` button (the three horizontal lines in the upper left-hand corner).
+3. Select `Billing`.
+4. Set up your billing account.
+
+Now, let's create a `road-trip` project.
+
+1. Click the `navigation menu` button (the three horizontal lines in the upper left-hand corner).
+2. Select `Home`.
+3. Click on the project drop-down in the top navigation bar.
+4. Click `NEW PROJECT`.
+5. Enter `road-trip` in the `Project name` field.
+6. Click `Create`.
+
+Now, let's enable the necessary APIs.
+
+1. Click on the project drop-down in the top navigation bar.
+2. Select the `road-trip` project.
+3. Click the `navigation menu` button (the three horizontal lines in the upper left-hand corner).
+4. Select `APIs & Services`.
+5. Click `+ ENABLE APIS & SERVICES`.
+6. Search for and select the `Maps JavaScript API`.
+7. Click `ENABLE`.
+8. Repeat steps 3-7 for the `Directions API` and the `Distance Matrix API`.
+
+Finally, let's create an API key.
+
+1. Click the `navigation menu` button (the three horizontal lines in the upper left-hand corner).
+2. Select `APIs & Services > Credentials`.
+3. Click `+ CREATE CREDENTIALS`.
+4. Select `API key`.
+5. Copy your API key.
 6. Open your favorite text editor and type:
 
 ```
 # Enter your Google Maps API key
 GOOGLE_MAPS_API_KEY = "Paste Your API Key Here"
 ```
-7. Ensure you pasted your API key between the " "
-8. Save this file as `config.py` in the `road-trip-optimization-master` directory on your desktop
+
+7. Ensure you pasted your API key between the " ".
+8. Save this file as `config.py` in the `road-trip-optimization-master` directory on your desktop.
+
+One last step! 
+
+1. On your desktop, open the `road-trip-optimization-master` directory.
+2. Right click on the `src/results_template.html` file and open it with your favorite text editor.
+3. In line 31, find `YOUR_API_KEY` within the URL.
+4. Highlight `YOUR_API_KEY` and press `command + V` to paste your Google API key. 
+5. Save and close the file.
+
+Success!
 
 ### Run the program
 
